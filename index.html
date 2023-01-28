@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check My Weather</title>
+    <link rel="icon" type="images/x-icon" href="/images/sunny.gif" />
+    <link rel='stylesheet' type='text/css' href="index.css" />
+  </head>
+  <body>
+    <section class="hideLoadingBackground">
+      <div class="hideLoader"></div>
+    </section>
+    <header>
+      <h1>Check My Weather</h1>
+    </header>
+    <section class="parent_section">
+      <section class="search_section">
+        <section class="country_section">
+          <div>
+            <label>Select Country</label>
+          </div>
+          <input
+            type="text"
+            placeholder="Select country"
+            class="searchCountries"
+          />
+          <div id="countryDropDown" class="hideCountryList"></div>
+        </section>
+        <section class="country_section">
+          <div>
+            <label>Select City</label>
+          </div>
+          <input type="text" placeholder="Select city" class="searchCity" />
+          <div id="cityDropDown" class="hideCityList">
+            <p class="cityLI" aria-disabled="true">Please select country</p>
+          </div>
+        </section>
+      </section>
+      <section class="weather_section">
+        <div class="weather_section-gifDivHolder">
+          <div class="weatherMainImgDiv">
+            <div class="weatherImgMainHeading">
+              <div>
+                <h2 id="temperature"></h2>
+                <h3 id="weatherName"></h3>
+                <h4 id="placeName"></h4>
+              </div>
+            </div>
+            <div class="weatherImgDiv">
+              <!-- <img
+                src="./images/sunny.gif"
+                class="weatherMainImg"
+                alt="weather image"
+              /> -->
+            </div>
+          </div>
+          <div class="weather_properties_div">
+            <div class="weatherPropertiesImgDiv">
+              <div class="windSpeed weatherPropertyImgs">
+                <img
+                  src="./images/Windy.gif"
+                  class="weatherPropertiesImg"
+                  alt="weather image"
+                />
+                <!-- <span>Wind Speed: 1.4 km/h</span> -->
+              </div>
+            </div>
+            <div class="weatherPropertiesImgDiv">
+              <div class="humidity weatherPropertyImgs">
+                <img
+                  src="./images/Humidity.gif"
+                  class="weatherPropertiesImg"
+                  alt="weather image"
+                />
+                <!-- <span>Humidity: 43%</span> -->
+              </div>
+            </div>
+            <div class="weatherPropertiesImgDiv">
+              <div class="feelsLike weatherPropertyImgs">
+                <img
+                  src="./images/Feels Like.gif"
+                  class="weatherPropertiesImg"
+                  alt="weather image"
+                />
+                <!-- <span>Feels Like</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+
+  <script src="./index.js"></script>
+</html>

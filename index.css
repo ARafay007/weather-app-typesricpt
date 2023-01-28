@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    /*#2c5364,
+    #203a43,
+    #0f2027 */
+      /*#00bf8f,
+    #001510 */ #434343,
+    #000000
+  );
+  height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-family: nexa;
+}
+
+header {
+  text-align: center;
+  padding-top: 30px;
+  /* background-color: blueviolet; */
+  height: 10vh;
+}
+
+.parent_section {
+  display: flex;
+  padding: 5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 90vh;
+}
+
+.search_section {
+  display: flex;
+  width: 40%;
+  margin-right: 5px;
+}
+
+.weather_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+.search_section,
+.weather_section {
+  height: 100%;
+  /* background-color: white; */
+}
+
+.country_section {
+  height: auto;
+  margin: 5px;
+}
+
+.searchCountries,
+.searchCity {
+  width: 250px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 3px;
+  outline: none;
+  padding: 0 5px;
+}
+
+.searchCountries:focus,
+.searchCountries:hover,
+.searchCity:focus,
+.searchCity:hover {
+  border: 1px solid goldenrod;
+}
+
+.showCountryDropDown {
+  max-height: 300px;
+  min-height: 30px;
+  overflow-y: auto;
+  width: 250px;
+  border-radius: 3px;
+  background-color: rgba(27, 27, 27, 0.3);
+  transition: height 0.5s;
+}
+
+.countryLI,
+.cityLI {
+  border-bottom: 1px solid black;
+  padding: 5px 10px;
+}
+
+.countryLI:hover,
+.cityLI:hover {
+  background-color: rgba(27, 27, 27, 0.7);
+}
+
+.hideCountryList {
+  height: 0px;
+  transition: height 0.5s;
+}
+
+.hideCountryList,
+.hideCityList,
+.hideLI {
+  display: none;
+}
+
+.weatherMainImgDiv {
+  display: flex;
+  align-items: stretch;
+}
+
+.weather_section-gifDivHolder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 60% 40%;
+}
+
+.weather_properties_div {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-items: center;
+}
+
+.weatherImgMainHeading {
+  flex-grow: 1;
+  display: grid;
+  text-align: right;
+  align-items: center;
+}
+
+.weatherImgDiv {
+  flex-grow: 3;
+}
+
+.weatherMainImg {
+  width: auto;
+  height: 100%;
+}
+
+.weatherPropertiesImgDiv {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.weatherPropertiesImgDiv > div {
+  margin: auto;
+  width: 190px;
+  height: auto;
+}
+
+.weatherPropertiesImg {
+  height: 100%;
+  width: 100%;
+}
+
+.loadingBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+  background-color: #0000009c;
+}
+
+.hideLoadingBackground,
+.hideLoader {
+  display: none;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid grey; /*#3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .parent_section {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100vw;
+    height: 90vh;
+  }
+
+  .search_section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 5px;
+  }
+
+  .weather_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .weatherMainImgDiv {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .weatherImgMainHeading {
+    text-align: left;
+  }
+
+  .weatherImgDiv {
+    height: 300px;
+  }
+
+  .weather_properties_div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .parent_section {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 90vh;
+  }
+
+  .search_section {
+    display: flex;
+    width: 100%;
+    margin-right: 5px;
+  }
+
+  .weather_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .countryLI {
+    z-index: 100;
+  }
+}
